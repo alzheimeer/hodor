@@ -4,7 +4,7 @@
    The program obtain #votes current and just sending the necessary votes.
 """
 import requests
-import sys
+
 
 try:
     ID = int(input("Input number the ID: "))
@@ -16,7 +16,7 @@ try:
 except ValueError:
     print("PLEASE: input number integer.")
     exit(98)
-    
+
 url = 'http://158.69.76.135/level1.php'
 response = requests.get(url)
 key = response.cookies['HoldTheDoor']
@@ -32,7 +32,8 @@ if ((txt[txtid+3]).isdigit()):
     votescurrent = int(txt[txtid+3])
 
 print("------------------------------------------------------------------")
-print("Hello Alzheimeer: ID: {}, VOTES CURRENT: {}, URL: {},  KEY: {}".format(ID, votescurrent, url, key))
+print("Hello Alzheimeer: ID: {}, VOTES CURRENT: {}, URL: {},  KEY: {}\
+".format(ID, votescurrent, url, key))
 print("------------------------------------------------------------------")
 print(success)
 print("------------------------------------------------------------------")
