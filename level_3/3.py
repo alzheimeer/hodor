@@ -6,8 +6,8 @@
 """
 import requests
 import pytesseract
-from PIL import Image
-#import cv2
+#from PIL import Image
+import cv2
 
 try:
     ID = int(input("Input number the ID: "))
@@ -52,7 +52,6 @@ print("------------------------------------------------------------------")
 
 
 for i in range(votescurrent, votes):
-
     response = s.get(url, headers=headers)
     key = response.cookies['HoldTheDoor']
     data["key"] = key
@@ -63,8 +62,9 @@ for i in range(votescurrent, votes):
     f.write(r.content)
     f.close()
 
-    #img = cv2.imread("captcha.png")
-    readimg = pytesseract.image_to_string(Image.open('captcha.png'))
+    img = cv2.imread("captcha.png")
+  #  readimg = pytesseract.image_to_string(Image.open('captcha.png'))
+    readimg = pytesseract.image_to_string(img)
     data["captcha"] = readimg
     response1 = s.post(url, data=data)
     if response1.status_code is 200 and success in response1.text:
