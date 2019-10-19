@@ -8,7 +8,7 @@ In this project, I used Python's requests, BeautifulSoup, Pytesseract, Time, re,
 Based on http protocols, and how they work when it comes to send data trough the headers.
 Http Headers, Web Scrapping, OCR for captcha, Proxies and more.
 
-![image](https://www.bnmc.net/images/easyblog_shared/June_2019/6-14-19/200108134_bad_400.jpg)
+![image](http://i.imgur.com/tthpnHa.gif)
 <hr>
 
 ## Tasks 6
